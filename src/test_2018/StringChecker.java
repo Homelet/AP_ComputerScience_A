@@ -3,6 +3,14 @@ package test_2018;
 public interface StringChecker{
 	
 	boolean isValid(String str);
+	
+	static void main(String[] args){
+		StringChecker c = new CodeWordChecker("pass");
+		System.out.println(c.isValid("MyPass"));
+		System.out.println(c.isValid("Mypassport"));
+		System.out.println(c.isValid("happy"));
+		System.out.println(c.isValid("1,000,000,000,000,000"));
+	}
 }
 
 class CodeWordChecker implements StringChecker{
@@ -22,8 +30,7 @@ class CodeWordChecker implements StringChecker{
 	
 	@Override
 	public boolean isValid(String str){
-		if(str.length() > min && str.length() < max){
-		}
-		return false;
+		return str.length() >= min && str.length() <= max && !str.contains(exclude);
 	}
 }
+

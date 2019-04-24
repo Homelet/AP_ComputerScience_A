@@ -1,7 +1,5 @@
 package test;
 
-import test_2018.ArrayTester;
-
 public class Main{
 	
 	public static void main(String[] args){
@@ -16,6 +14,6 @@ public class Main{
 				{ 3, 1, 2 },
 				{ 7, 8, 9 },
 		};
-		System.out.println(ArrayTester.isLatin(square2));
+//		System.out.println(ArrayTester.isLatin(square2));
 	}
 }
