@@ -33,6 +33,7 @@ class WordPairList{
 	private ArrayList<WordPair> allPairs;
 	
 	public WordPairList(String[] words){
+		allPairs = new ArrayList<>();
 		for(int index = 0; index < words.length; index++){
 			for(int innerIndex = index + 1; innerIndex < words.length; innerIndex++){
 				allPairs.add(new WordPair(words[index], words[innerIndex]));
